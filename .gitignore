@@ -1,0 +1,5 @@
+build/* 
+src/.kdev4/
+src/*.kdev4
+
+
