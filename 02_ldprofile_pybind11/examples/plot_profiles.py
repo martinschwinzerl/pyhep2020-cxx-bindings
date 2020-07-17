@@ -27,12 +27,6 @@ if __name__ == "__main__":
     ax1.legend()
 
     ax2.plot(
-        z,
-        50.0 * prof_gauss.evaluate(z),
-        label=r"gaussian, $\sigma=8.0$",
-        color="#377eb8",
-    )
-    ax2.plot(
         z, 50.0 * prof_qgauss.evaluate(z), label=r"q=3/5, $\beta=0.01$", color="#4daf4a"
     )
     ax2.set_ylim(0.0, 6.0)
