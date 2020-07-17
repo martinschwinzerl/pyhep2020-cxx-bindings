@@ -1,0 +1,4 @@
+_skbuild/*
+build/*
+dist/*
+ldprofile_ctypes.egg-info/*
