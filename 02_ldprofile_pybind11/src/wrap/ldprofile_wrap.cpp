@@ -9,7 +9,6 @@ namespace
 
 PYBIND11_MODULE( ldprofile_pybind11, m )
 {
-    // m ... ldprofile_pybind11 module
     m.doc() = "ldprofile python bindings generated using pybind11";
 
     /* For double precision */
@@ -22,7 +21,7 @@ PYBIND11_MODULE( ldprofile_pybind11, m )
     py::class_< base_profile_t > base_profile_obj( m, "LDProfileBase" );
 
     py::class_< c_profile_t > c_profile_obj( m, "CoastingLDProfile", base_profile_obj );
-    py::class_< q_profile_t > q_profile_obj( m, "QGaussLDProfile", base_profile_obj );
+    py::class_< q_profile_t > q_profile_obj( m, "QGaussianLDProfile", base_profile_obj );
     py::class_< l_profile_t > l_profile_obj( m, "LinInterpolLDProfile", base_profile_obj );
 
     /* call the binding generation functions for the specific types */
