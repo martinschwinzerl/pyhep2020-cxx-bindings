@@ -1,0 +1,17 @@
+cmake_minimum_required( VERSION 2.8.2 )
+
+project( ext_pybind11 NONE )
+
+include(ExternalProject)
+
+ExternalProject_Add(
+  pybind11
+  GIT_REPOSITORY    https://github.com/pybind/pybind11.git
+  GIT_TAG           master
+  SOURCE_DIR        "@EXT_PYBIND11_OUT_DIR@/src"
+  CMAKE_ARGS        -DPYBIND11_TEST=Off -DPYBIND11_INSTALL=On -DCMAKE_INSTALL_PREFIX=@EXT_PYBIND11_INSTALL_DIR@
+  BINARY_DIR        "@EXT_PYBIND11_OUT_DIR@/build"
+  INSTALL_DIR       "@EXT_PYBIND11_INSTALL_DIR@"
+)
+
+# end: @EXT_PYBIND11_OUT_DIR@/CMakeLists.txt
